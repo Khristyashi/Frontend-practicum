@@ -12,10 +12,6 @@ html, body {
     margin: 0;
 }
 
-main {
-    flex-grow: 1;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -26,6 +22,27 @@ body {
     flex-direction: column;
 }
 
+main {
+    flex-grow: 1;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+img, .center-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Заголовок */
 header {
     background: linear-gradient(135deg, #3f3f77, #1a1a1a, #3f3f77);
     color: white;
@@ -43,10 +60,12 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* Навигация */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -56,6 +75,7 @@ nav ul li a {
     padding: 10px 15px;
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
+    font-size: 1rem;
 }
 
 nav ul li a.active {
@@ -65,28 +85,6 @@ nav ul li a.active {
 nav ul li a:hover {
     background-color: #f2f2f2;
     color: #1a1a1a;
-}
-
-ul {
-    list-style: disc;
-    padding-left: 40px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-footer {
-    background: #2e2e2e;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
 }
 
 iframe {
@@ -104,25 +102,31 @@ iframe {
     overflow: auto;
 }
 
+/* Footer */
+footer {
+    background: #2e2e2e;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
 /* Герой-секция */
 .hero {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
     position: relative;
     padding: 30px 15px;
     max-width: 1200px;
     margin: auto;
+    text-align: center;
 }
 
 .hero .hero-image {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 10px;
     opacity: 0.6;
-    object-fit: cover;
 }
 
 .hero-content {
@@ -130,15 +134,15 @@ iframe {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-size: 2rem;
+    margin: 20px 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-
 }
 
 .hero p {
@@ -146,12 +150,11 @@ iframe {
     margin-top: 10px;
 }
 
-/* Секции о группе */
+/* Основной текст */
 .main_text {
-    margin-top: 30px;
+    margin: 30px auto;
     padding: 30px 15px;
     max-width: 1200px;
-    margin: auto;
 }
 
 .main_text h2 {
@@ -165,22 +168,21 @@ iframe {
     width: fit-content;
 }
 
-/* Секция альбомов */
+/* Альбомы */
 .albums {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 20px 0;
     padding: 30px 15px;
     max-width: 1200px;
     margin: auto;
 }
 
 .album-card {
-    background: radial-gradient(circle, #1a1a1a, #3f3f77); /* Темный серый фон для карточек */
+    background: radial-gradient(circle, #1a1a1a, #3f3f77);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 300px;
     padding: 20px;
     text-align: center;
@@ -192,9 +194,6 @@ iframe {
 }
 
 .album-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
     margin-bottom: 15px;
 }
 
@@ -209,14 +208,6 @@ iframe {
     color: #bababa;
     line-height: 1.4;
     margin: 10px;
-}
-
-.center-image {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
 }
 
 /* Ссылки */
@@ -255,7 +246,6 @@ iframe {
     transform-origin: bottom left;
 }
 
-/* Контейнер форм */
 .form-container {
     display: flex;
     justify-content: center;
@@ -266,39 +256,61 @@ iframe {
     overflow: auto;
 }
 
+/* Карта */
+#map {
+    width: 90%; 
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
-    nav ul {
-        flex-wrap: wrap;
-    }
-
     header h1 {
         font-size: 1.5rem;
+        margin-bottom: 5px;
     }
 
-    main h2 {
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .hero h2 {
         font-size: 1.5rem;
     }
 
-    .albums {
-        flex-direction: column;
-        align-items: center;
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .main_text h2 {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     header h1 {
         font-size: 1.2rem;
-        margin-bottom: 5px;
     }
 
-    main h2 {
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .main_text h2 {
         font-size: 1.3rem;
-        margin-bottom: 15px;
-    }
-
-    .albums {
-        flex-direction: column;
-        align-items: center;
     }
 }
