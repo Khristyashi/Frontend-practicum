@@ -276,7 +276,6 @@ footer p {
 
     nav ul li a {
         font-size: 0.9rem;
-        padding: 8px 10px;
     }
 
     .hero h2 {
@@ -296,6 +295,8 @@ footer p {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        text-align: center;
+        justify-content: center;
     }
 
     header h1 {
