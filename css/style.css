@@ -46,9 +46,10 @@ img, .center-image {
 header {
     background: linear-gradient(135deg, #3f3f77, #1a1a1a, #3f3f77);
     color: white;
-    padding-top: 140px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
     text-align: center;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -60,24 +61,12 @@ header h1 {
 }
 
 /* Навигация */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-}
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li a {
@@ -312,7 +301,6 @@ footer p {
         padding: 0;
         max-width: 100%;
     }
-
     header h1 {
         font-size: 1.2rem;
     }
